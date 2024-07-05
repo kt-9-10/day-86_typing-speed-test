@@ -9,7 +9,7 @@ sample_text = ("apple banana cherry orange grape pineapple strawberry blueberry 
 sample_words = sample_text.split()
 input_time = None
 timer = ""
-time_remit = 5
+time_remit = 60
 
 
 def update_progress(event):
@@ -94,17 +94,17 @@ Timer_title.pack(pady=5)
 Timer_count = Label(window, text=time_remit, wraplength=400, font=("Arial", 28))
 Timer_count.pack(pady=5)
 
-sample_text_widget = Text(window, height=8, width=50, wrap='word', font=("Arial", 14))
+sample_text_widget = Text(window, height=8, width=65, wrap='word', font=("Arial", 18))
 sample_text_widget.insert(END, sample_text)
 sample_text_widget.config(state="disabled")
-sample_text_widget.pack(pady=10)
+sample_text_widget.pack(padx=20, pady=10)
 
-text_entry = Text(window, height=8, width=50, wrap='word', font=("Arial", 14))
+text_entry = Text(window, height=8, width=65, wrap='word', font=("Arial", 18))
 text_entry.pack(pady=10)
 text_entry.bind("<KeyPress>", start_timer)
 text_entry.bind("<KeyRelease>", update_progress)
 
-reset_button = Button(window, text="Reset", command=reset_timer, font=("Arial", 14))
+reset_button = Button(window, text="Reset", command=reset_timer, font=("Arial", 18))
 reset_button.pack(pady=10)
 
 result_label = Label(window, text="", wraplength=400, font=("Arial", 14))
