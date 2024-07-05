@@ -6,7 +6,7 @@ sample_text = ("apple banana cherry orange grape pineapple strawberry blueberry 
                "radish celery asparagus eggplant pumpkin squash beans peas lentils chickpeas oats rice quinoa barley "
                "wheat corn millet rye buckwheat pasta couscous bread bagel muffin croissant pancake waffle donut "
                "cookie cake pie pudding icecream yogurt cheese butter milk cream juice soda coffee tea water")
-sample_word = sample_text.split()
+sample_words = sample_text.split()
 input_time = None
 timer = ""
 time_remit = 5
@@ -72,11 +72,11 @@ def stop_timer():
 
 def calculate_wpm():
     typed_text = text_entry.get("1.0", END).strip()
-    typed_word = typed_text.split()
+    typed_words = typed_text.split()
     word_count = 0
-    for i in range(len(typed_word)):
+    for i in range(len(typed_words)):
         try:
-            if typed_word[i] == sample_word[i]:
+            if typed_words[i] == sample_words[i]:
                 word_count += 1
             else:
                 break
